@@ -1,0 +1,9 @@
+- name: get users of group
+  shell: getent group {{item}} | awk -F":" '{printf $4}'
+  register: users_of_group
+
+- name: Delete group
+  group:
+   name: "{{item}}"
+   state: absent
+  when: users_of_group.stdout == ""

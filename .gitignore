@@ -1,0 +1,11 @@
+.vaultpass
+.retry
+secret
+*.secret
+.venv
+.vscode
+*.tmp
+/.project
+/.settings/
+/*.iml
+/.idea/
